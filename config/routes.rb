@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  resources :todos, only: [:index, :new, :create]
   root 'todos#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
