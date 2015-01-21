@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :todos, only: [:index, :new, :create]
+  resources :todos, only: [:index, :new, :create] do
+    resource :completion, only: :create
+  end
   root 'todos#index'
 
   resource :session, only: [:new, :create]
