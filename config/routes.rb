@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :todos, only: [:index, :new, :create]
   root 'todos#index'
 
+  resource :session, only: [:new, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
